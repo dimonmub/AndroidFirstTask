@@ -1,0 +1,188 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#eeeeee"
+    tools:context=".MyActivity">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/firstLine">
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="57dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cafeName"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:text="Вермишель" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отзывов нет"
+                android:id="@+id/reviews"
+                android:textSize="18dp"
+                android:textColor="#ff808080"
+                android:layout_alignParentBottom="true"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="#ff808080"
+            />
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="fill_parent">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/car" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below = "@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:text="5 мин."
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+        </LinearLayout>
+    <View
+        android:layout_below="@id/firstLine"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ff808080" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Кафе"
+        android:id="@+id/building_type"
+        android:layout_below="@+id/firstLine"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00 - 23:00"
+        android:id="@+id/working_hours"
+        android:layout_below="@+id/building_type"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/address"
+        android:layout_below="@+id/working_hours"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ff808080"
+        android:textSize="18dp"
+        android:text="Никитинская ул., 31, Воронеж, Воронежская область, 394018"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/address"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffdddddd"
+        android:id="@+id/secondLine">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/call"
+            android:src="@drawable/phone"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/save"
+            android:src="@drawable/disk"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/share"
+            android:src="@drawable/people"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/secondLine"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/thirdLine">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Позвонить"
+            android:id="@+id/textCall"
+            android:textColor="#ff0000ff"
+            android:textSize="18dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            android:id="@+id/textSave"
+            android:textColor="#ff0000ff"
+            android:textSize="18dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Поделиться"
+            android:id="@+id/textShare"
+            android:textColor="#ff0000ff"
+            android:textSize="18dp"
+            android:layout_weight="1.5" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/thirdLine"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/map2"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>
